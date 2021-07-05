@@ -1,0 +1,71 @@
+print('Добро пожаловать. Вы играете в текстовой квест!')
+print('\n')
+
+
+def bedroom():
+    print('Вы в спальне. Куда идём?')
+    print('1 — в ванну')
+    print('2 — в коридор')
+    print('\n')
+    answer = int(input())
+    if answer == 1:
+        bath()
+    elif answer == 2:
+        hallway()
+
+
+def hallway():
+    print('Вы в коридоре. Куда идём?')
+    print('1 — в спальню')
+    print('2 — в ванну')
+    print('3 — на кухню')
+    print('4 — в дверь')
+    print('\n')
+    answer = int(input())
+    if answer == 1:
+        bedroom()
+    elif answer == 2:
+        bath()
+    elif answer == 3:
+        kitchen()
+    elif answer == 4:
+        door()
+
+
+def bath():
+    print('Вы в ванне. Куда идём?')
+    print('1 — в коридор')
+    print('2 — в спальню')
+    print('\n')
+    answer = int(input())
+    if answer == 1:
+        hallway()
+    elif answer == 2:
+        bedroom()
+
+
+def kitchen():
+    print('Вы в кухне. Куда идём?')
+    print('1 — в коридор')
+    print('2 — в окно')
+    print('\n')
+    answer = int(input())
+    if answer == 1:
+        hallway()
+    elif answer == 2:
+        window()
+
+
+def door():
+    print('Вы вышли из дома! Happy end.')
+
+
+def window():
+    print('Вы вышли в окно! Game end.')
+
+
+def main_menu():
+    bedroom()
+
+
+main_menu()
